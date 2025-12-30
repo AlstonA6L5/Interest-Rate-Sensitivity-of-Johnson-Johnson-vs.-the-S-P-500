@@ -28,12 +28,17 @@ Johnson & Johnson’s stock is less sensitive to U.S. interest rate increases th
 
 
 ## Key Findings
-- TBD
+- 	•	Johnson & Johnson’s monthly returns generally track the S&P 500, but with noticeably lower volatility, indicating its defensive characteristics relative to the broader market.
+	•	Changes in the federal funds rate do not contemporaneously drive stock returns for either Johnson & Johnson or the S&P 500, as evidenced by weak scatter relationships.
+	•	Major adjustments in the federal funds rate tend to occur after periods of significant market volatility, particularly during early 2020, suggesting that monetary policy reacts to market stress rather than leading it.
+	•	During the COVID-19 shock, equity returns declined sharply before the Federal Reserve implemented aggressive rate cuts, reinforcing the presence of a policy response lag.
+	•	Comparative analysis shows that Johnson & Johnson’s sensitivity to interest rate changes is similar to or weaker than that of the overall market, consistent with its classification as a large-cap, defensive healthcare stock.
 
 ## Tools & Technologies
 - SQL (PostgreSQL)
+- EXCEL 
 - CSV DATA
-- Relational databases
+- Relational databases (FEDERAL RESERVE BANK of ST.LOUIS)
 - Git & GitHub
 
 
