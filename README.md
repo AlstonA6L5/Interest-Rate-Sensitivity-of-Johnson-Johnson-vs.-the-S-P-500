@@ -42,7 +42,7 @@ Johnson & Johnson’s stock is less sensitive to U.S. interest rate increases th
 - SQL (PostgreSQL)
 - EXCEL 
 - CSV DATA
-- Relational databases (FEDERAL RESERVE BANK of ST.LOUIS)
+- Relational databases (Federal Reserve Bank of St Louis)
 - Git & GitHub
 
 
