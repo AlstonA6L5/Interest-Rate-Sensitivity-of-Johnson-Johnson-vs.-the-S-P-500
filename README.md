@@ -9,7 +9,7 @@ How does Johnson & Johnson’s stock respond to U.S. Federal Reserve interest ra
 <img width="1524" height="684" alt="65321fadc28038b7e1354b6a_Johnson   Johnson" src="https://github.com/user-attachments/assets/11235f8f-d72c-4b6b-a2b1-021b9082f741" />
 
 ## Hypothesis
-Johnson & Johnson’s stock is less sensitive to U.S. interest rate increases than the S&P 500 due to its stable cash flows, diversified business model, and defensive role within the healthcare sector.
+Johnson & Johnson’s stock is less sensitive to U.S. interest rate increases than the S&P 500.
 
 ## Data Sources
 - U.S. Treasury interest rate data (Federal Reserve Economic Data – FRED)
