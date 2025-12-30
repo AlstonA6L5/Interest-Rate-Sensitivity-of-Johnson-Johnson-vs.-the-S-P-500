@@ -1,7 +1,6 @@
 # Interest-Rate-Sensitivity-of-Johnson-Johnson-vs.-the-S-P-500
 When the Federal Reserve raises interest rates, the stock market often reacts fast and sometimes violently. But does a massive healthcare company like Johnson & Johnson move the same way as the broader S&P 500, or does it behave differently?
 
-# Interest Rate Sensitivity of Johnson & Johnson vs. the S&P 500
 ## Project Description
 This project explores whether Johnson & Johnson reacts differently to U.S. interest rate changes than the broader stock market. We use historical data on U.S. interest rates along with monthly returns for Johnson & Johnson and the S&P 500 to directly compare how each responds when interest rates rise or fall. This question matters because interest rate increases often create uncertainty for investors, and understanding whether a large healthcare company like Johnson & Johnson is less affected can explain why some stocks are viewed as safer during tightening cycles. 
 ## Research Question
