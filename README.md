@@ -4,7 +4,7 @@ When the Federal Reserve raises interest rates, the stock market often reacts fa
 ## Project Description
 This project explores whether Johnson & Johnson reacts differently to U.S. interest rate changes than the broader stock market. We use historical data on U.S. interest rates along with monthly returns for Johnson & Johnson and the S&P 500 to directly compare how each responds when interest rates rise or fall. This question matters because interest rate increases often create uncertainty for investors, and understanding whether a large healthcare company like Johnson & Johnson is less affected can explain why some stocks are viewed as safer during tightening cycles. 
 ## Research Question
-How does Johnson & Johnson’s stock respond to the U.S. Federal Reserve interest rate changes compared to the overall S&P 500?
+How does Johnson & Johnson’s stock respond to U.S. Federal Reserve interest rate changes compared to the overall S&P 500?
 
 <img width="1524" height="684" alt="65321fadc28038b7e1354b6a_Johnson   Johnson" src="https://github.com/user-attachments/assets/11235f8f-d72c-4b6b-a2b1-021b9082f741" />
 
