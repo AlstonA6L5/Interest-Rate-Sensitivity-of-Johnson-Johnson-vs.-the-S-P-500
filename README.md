@@ -1,2 +1,2 @@
 # Interest-Rate-Sensitivity-of-Johnson-Johnson-vs.-the-S-P-500
-This project analyzes how Johnson &amp; Johnson’s stock responds to changes in U.S. interest rates compared to the S&amp;P 500. Using SQL to analyze historical equity prices and Treasury yields, the project evaluates relative volatility and performance across rising and falling rate environments, applying Bloomberg Market Concepts to interpret results.
+When the Federal Reserve raises interest rates, the stock market often reacts fast and sometimes violently. But does a massive healthcare company like Johnson & Johnson move the same way as the broader S&P 500, or does it behave differently?
