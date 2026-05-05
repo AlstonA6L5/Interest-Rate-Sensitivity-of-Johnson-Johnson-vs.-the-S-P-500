@@ -8,50 +8,48 @@
 \f0\fs24 \cf0 \
 \'97FINDs the correlation coefficient of JNJ returns to changes in interest rate \
 -FINDS the correlation coefficient of SP500 returns to changes in interest rate\
-\
-WITH j AS (\
-  SELECT\
-    date_trunc('month', date)::date AS month,\
-    close\
-  FROM jnj\
-),\
-s AS (\
-  SELECT\
-    date_trunc('month', date)::date AS month,\
-    sp500\
-  FROM sp500\
-),\
-f AS (\
-  SELECT\
-    date_trunc('month', date)::date AS month,\
-    fedfunds\
-  FROM fedfunds\
-),\
-base AS (\
-  SELECT\
-    j.month,\
-    j.close AS jnj_close,\
-    s.sp500 AS spx_level,\
-    f.fedfunds AS fedfunds_rate\
-  FROM j\
-  JOIN s ON s.month = j.month\
-  JOIN f ON f.month = j.month\
-),\
-calc AS (\
-  SELECT\
-    month,\
-    (jnj_close / LAG(jnj_close) OVER (ORDER BY month) - 1) AS jnj_ret,\
-    (spx_level / LAG(spx_level) OVER (ORDER BY month) - 1) AS spx_ret,\
-    (fedfunds_rate - LAG(fedfunds_rate) OVER (ORDER BY month)) AS rate_change\
-  FROM base\
-)\
-SELECT\
-  COUNT(*) FILTER (\
-    WHERE jnj_ret IS NOT NULL\
-      AND spx_ret IS NOT NULL\
-      AND rate_change IS NOT NULL\
-  ) AS usable_rows,\
-  corr(jnj_ret, rate_change) AS corr_jnj_vs_ratechg,\
-  corr(spx_ret, rate_change) AS corr_spx_vs_ratechg\
-FROM calc;\
-}
+WITH j AS (
+  SELECT
+    date_trunc('month', date)::date AS month,
+    close AS jnj_close
+  FROM jnj
+),
+s AS (
+  SELECT
+    date_trunc('month', date)::date AS month,
+    index_level AS spx_level
+  FROM sp500
+),
+f AS (
+  SELECT
+    date_trunc('month', date)::date AS month,
+    rate AS fedfunds_rate
+  FROM fedfunds
+),
+base AS (
+  SELECT
+    j.month,
+    j.jnj_close,
+    s.spx_level,
+    f.fedfunds_rate
+  FROM j
+  JOIN s ON s.month = j.month
+  JOIN f ON f.month = j.month
+),
+calc AS (
+  SELECT
+    month,
+    (jnj_close / LAG(jnj_close) OVER (ORDER BY month) - 1) AS jnj_ret,
+    (spx_level / LAG(spx_level) OVER (ORDER BY month) - 1) AS spx_ret,
+    (fedfunds_rate - LAG(fedfunds_rate) OVER (ORDER BY month)) AS rate_change
+  FROM base
+)
+SELECT
+  COUNT(*) FILTER (
+    WHERE jnj_ret IS NOT NULL
+      AND spx_ret IS NOT NULL
+      AND rate_change IS NOT NULL
+  ) AS usable_rows,
+  corr(jnj_ret, rate_change) AS corr_jnj_vs_ratechg,
+  corr(spx_ret, rate_change) AS corr_spx_vs_ratechg
+FROM calc;
